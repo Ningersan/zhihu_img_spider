@@ -35,6 +35,8 @@ class ZHSP:
         if not os.path.exists(path):
             os.makedirs(path)
             print u'已创建%s文件夹' % path
+        else:
+            print u'文件夹%s已经存在' % path
         return path
 
     def cut_url(self, url):
