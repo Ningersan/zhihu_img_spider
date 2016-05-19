@@ -36,7 +36,7 @@ class ZHSP:
             os.makedirs(path)
             print u'已创建%s文件夹' % path
         else:
-            print u'文件夹%s已经存在' % path
+            pass
         return path
 
     def cut_url(self, url):
@@ -83,7 +83,7 @@ class ZHSP:
                 print u'%s 有 %s 张图片.' % (author, len(img_urls))
                 for img_url in img_urls:
                     img_original = img_url.replace('_b', '_r')
-                    file_name = self.mk_dir(author) + self.cut_url(img_original)
+                    file_name = self.mk_dir(author) + '\\' + self.cut_url(img_original)
                     try:
                         urllib.urlretrieve(img_original, file_name)
                         print u'正在下载 %s 中' % img_original
